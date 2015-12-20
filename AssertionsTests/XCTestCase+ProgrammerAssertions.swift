@@ -6,6 +6,10 @@
 //  Copyright © 2015 mohamede1945. All rights reserved.
 //
 
+// **** IMPORTANT HOW TO USE ****
+// Drop this file to your test target. Just besides your test cases.
+// For an example see https://github.com/mohamede1945/AssertionsTestingExample
+
 import Foundation
 import XCTest
 @testable import Assertions

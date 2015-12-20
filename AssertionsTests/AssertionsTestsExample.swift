@@ -1,16 +1,19 @@
 //
-//  AssertionsTests.swift
+//  AssertionsTestsExample.swift
 //  AssertionsTests
 //
 //  Created by Mohamed Afifi on 12/20/15.
 //  Copyright © 2015 mohamede1945. All rights reserved.
 //
 
-import XCTest
+// **** IMPORTANT HOW TO USE ****
+// This file is just an example of how to use the assertion functions.
+// For an example see https://github.com/mohamede1945/AssertionsTestingExample
 
+import XCTest
 @testable import Assertions
 
-class AssertionsTests: XCTestCase {
+class AssertionsTestsExample: XCTestCase {
 
     // assert tests
 

@@ -6,7 +6,9 @@
 //  Copyright © 2015 mohamede1945. All rights reserved.
 //
 
-// **** Drop this file to your app or framework under test. Just besides your source code ***
+// **** IMPORTANT HOW TO USE ****
+// Drop this file to the target of your app or framework under test. Just besides your source code.
+// For an example see https://github.com/mohamede1945/AssertionsTestingExample
 
 import Foundation
 
