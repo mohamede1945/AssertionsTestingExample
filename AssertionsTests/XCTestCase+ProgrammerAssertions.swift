@@ -6,9 +6,14 @@
 //  Copyright © 2015 mohamede1945. All rights reserved.
 //
 
-// **** IMPORTANT HOW TO USE ****
-// Drop this file to your test target. Just besides your test cases.
-// For an example see https://github.com/mohamede1945/AssertionsTestingExample
+/// ### IMPORTANT HOW TO USE ###
+/// 1. Drop `ProgrammerAssertions.swift` to the target of your app or framework under test. Just besides your source code.
+/// 2. Drop `XCTestCase+ProgrammerAssertions.swift` to your test target. Just besides your test cases.
+/// 3. Use `assert`, `assertionFailure`, `precondition`, `preconditionFailure` and `fatalError` normally as you always do.
+/// 4. Unit test them with the new methods `expectAssert`, `expectAssertionFailure`, `expectPrecondition`, `expectPreconditionFailure` and `expectFatalError`.
+///
+/// This file is the unit test assertions.
+/// For a complete project example see https://github.com/mohamede1945/AssertionsTestingExample
 
 import Foundation
 import XCTest
@@ -18,11 +23,20 @@ private let noReturnFailureWaitTime = 0.1
 
 public extension XCTestCase {
 
-    public func assertAssert(
+    /**
+     Expects an `assert` to be called with a false condition.
+     If `assert` not called or the assert's condition is true, the test case will fail.
+
+     - parameter expectedMessage: The expected message to be asserted to the one passed to the `assert`. If nil, then ignored.
+     - parameter file:            The file name that called the method.
+     - parameter line:            The line number that called the method.
+     - parameter testCase:        The test case to be executed that expected to fire the assertion method.
+     */
+    public func expectAssert(
         expectedMessage: String? = nil,
         file: StaticString = __FILE__,
         line: UInt = __LINE__,
-        testcase: () -> Void
+        testCase: () -> Void
         ) {
 
             expectAssertionReturnFunction("assert", file: file, line: line, function: { (caller) -> () in
@@ -31,16 +45,25 @@ public extension XCTestCase {
                     caller(condition, message)
                 }
 
-                }, expectedMessage: expectedMessage, testCase: testcase) { () -> () in
+                }, expectedMessage: expectedMessage, testCase: testCase) { () -> () in
                     Assertions.assertClosure = Assertions.swiftAssertClosure
             }
     }
 
-    public func assertAssertionFailure(
+    /**
+     Expects an `assertionFailure` to be called.
+     If `assertionFailure` not called, the test case will fail.
+
+     - parameter expectedMessage: The expected message to be asserted to the one passed to the `assertionFailure`. If nil, then ignored.
+     - parameter file:            The file name that called the method.
+     - parameter line:            The line number that called the method.
+     - parameter testCase:        The test case to be executed that expected to fire the assertion method.
+     */
+    public func expectAssertionFailure(
         expectedMessage: String? = nil,
         file: StaticString = __FILE__,
         line: UInt = __LINE__,
-        testcase: () -> Void
+        testCase: () -> Void
         ) {
 
             expectAssertionReturnFunction("assertionFailure", file: file, line: line, function: { (caller) -> () in
@@ -49,16 +72,25 @@ public extension XCTestCase {
                     caller(false, message)
                 }
 
-                }, expectedMessage: expectedMessage, testCase: testcase) { () -> () in
+                }, expectedMessage: expectedMessage, testCase: testCase) { () -> () in
                     Assertions.assertionFailureClosure = Assertions.swiftAssertionFailureClosure
             }
     }
 
-    public func assertPrecondition(
+    /**
+     Expects an `precondition` to be called with a false condition.
+     If `precondition` not called or the precondition's condition is true, the test case will fail.
+
+     - parameter expectedMessage: The expected message to be asserted to the one passed to the `precondition`. If nil, then ignored.
+     - parameter file:            The file name that called the method.
+     - parameter line:            The line number that called the method.
+     - parameter testCase:        The test case to be executed that expected to fire the assertion method.
+     */
+    public func expectPrecondition(
         expectedMessage: String? = nil,
         file: StaticString = __FILE__,
         line: UInt = __LINE__,
-        testcase: () -> Void
+        testCase: () -> Void
         ) {
 
             expectAssertionReturnFunction("precondition", file: file, line: line, function: { (caller) -> () in
@@ -67,16 +99,25 @@ public extension XCTestCase {
                     caller(condition, message)
                 }
 
-                }, expectedMessage: expectedMessage, testCase: testcase) { () -> () in
+                }, expectedMessage: expectedMessage, testCase: testCase) { () -> () in
                     Assertions.preconditionClosure = Assertions.swiftPreconditionClosure
             }
     }
 
-    public func assertPreconditionFailure(
+    /**
+     Expects an `preconditionFailure` to be called.
+     If `preconditionFailure` not called, the test case will fail.
+
+     - parameter expectedMessage: The expected message to be asserted to the one passed to the `preconditionFailure`. If nil, then ignored.
+     - parameter file:            The file name that called the method.
+     - parameter line:            The line number that called the method.
+     - parameter testCase:        The test case to be executed that expected to fire the assertion method.
+     */
+    public func expectPreconditionFailure(
         expectedMessage: String? = nil,
         file: StaticString = __FILE__,
         line: UInt = __LINE__,
-        testcase: () -> Void
+        testCase: () -> Void
         ) {
 
             expectAssertionNoReturnFunction("preconditionFailure", file: file, line: line, function: { (caller) -> () in
@@ -85,16 +126,25 @@ public extension XCTestCase {
                     caller(message)
                 }
 
-                }, expectedMessage: expectedMessage, testCase: testcase) { () -> () in
+                }, expectedMessage: expectedMessage, testCase: testCase) { () -> () in
                     Assertions.preconditionFailureClosure = Assertions.swiftPreconditionFailureClosure
             }
     }
 
-    public func assertFatalError(
+    /**
+     Expects an `fatalError` to be called.
+     If `fatalError` not called, the test case will fail.
+
+     - parameter expectedMessage: The expected message to be asserted to the one passed to the `fatalError`. If nil, then ignored.
+     - parameter file:            The file name that called the method.
+     - parameter line:            The line number that called the method.
+     - parameter testCase:        The test case to be executed that expected to fire the assertion method.
+     */
+    public func expectFatalError(
         expectedMessage: String? = nil,
         file: StaticString = __FILE__,
         line: UInt = __LINE__,
-        testcase: () -> Void) {
+        testCase: () -> Void) {
 
             expectAssertionNoReturnFunction("fatalError", file: file, line: line, function: { (caller) -> () in
 
@@ -102,10 +152,12 @@ public extension XCTestCase {
                     caller(message)
                 }
 
-                }, expectedMessage: expectedMessage, testCase: testcase) { () -> () in
+                }, expectedMessage: expectedMessage, testCase: testCase) { () -> () in
                     Assertions.fatalErrorClosure = Assertions.swiftFatalErrorClosure
             }
     }
+
+    // MARK:- Private Methods
 
     private func expectAssertionReturnFunction(
         functionName: String,

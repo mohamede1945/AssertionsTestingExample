@@ -1,73 +1,80 @@
 //
-//  AssertionsTestsExample.swift
+//  ProgrammerAssertionsExampleTests.swift
 //  AssertionsTests
 //
 //  Created by Mohamed Afifi on 12/20/15.
 //  Copyright © 2015 mohamede1945. All rights reserved.
 //
 
-// **** IMPORTANT HOW TO USE ****
-// This file is just an example of how to use the assertion functions.
-// For an example see https://github.com/mohamede1945/AssertionsTestingExample
-
 import XCTest
 @testable import Assertions
+
+
+/// ### IMPORTANT HOW TO USE ###
+/// 1. Drop `ProgrammerAssertions.swift` to the target of your app or framework under test. Just besides your source code.
+/// 2. Drop `XCTestCase+ProgrammerAssertions.swift` to your test target. Just besides your test cases.
+/// 3. Use `assert`, `assertionFailure`, `precondition`, `preconditionFailure` and `fatalError` normally as you always do.
+/// 4. Unit test them with the new methods `expectAssert`, `expectAssertionFailure`, `expectPrecondition`, `expectPreconditionFailure` and `expectFatalError`.
+///
+/// This file is just an example of how to unit test the functions.
+/// When you run tests, you should expect many of them to fail. This is normally, because the test cases tests the error message produced by expectXXX methods.
+/// For a complete project example see https://github.com/mohamede1945/AssertionsTestingExample
 
 class AssertionsTestsExample: XCTestCase {
 
     // assert tests
 
     func testAssertNotCalled() {
-        assertAssert("Zero division") {
+        expectAssert("Zero division") {
         }
     }
 
     func testAssertTrueCondition() {
-        assertAssert("Zero division") {
+        expectAssert("Zero division") {
             divideAssert(1, by: 1)
         }
     }
 
     func testAssertNoMessage() {
-        assertAssert() {
+        expectAssert() {
             divideAssert(1, by: 0)
         }
     }
 
     func testAssertErrorIncorrectMessage() {
-        assertAssert("Invalid") {
+        expectAssert("Invalid") {
             divideAssert(1, by: 0)
         }
     }
 
     func testAssertCorrectMessage() {
-        assertAssert("Zero division") {
+        expectAssert("Zero division") {
             divideAssert(1, by: 0)
         }
     }
 
-    // assertionFailure tests
+    // expectionFailure tests
 
     func testAssertionFailureNotCalled() {
-        assertAssertionFailure("Zero division") {
+        expectAssertionFailure("Zero division") {
             divideAssertionFailure(1, by: 1)
         }
     }
 
     func testAssertionFailureNoMessage() {
-        assertAssertionFailure() {
+        expectAssertionFailure() {
             divideAssertionFailure(1, by: 0)
         }
     }
 
     func testAssertionFailureErrorIncorrectMessage() {
-        assertAssertionFailure("Invalid") {
+        expectAssertionFailure("Invalid") {
             divideAssertionFailure(1, by: 0)
         }
     }
 
     func testAssertionFailureCorrectMessage() {
-        assertAssertionFailure("Zero division") {
+        expectAssertionFailure("Zero division") {
             divideAssertionFailure(1, by: 0)
         }
     }
@@ -76,30 +83,30 @@ class AssertionsTestsExample: XCTestCase {
     // precondition tests
 
     func testPreconditionNotCalled() {
-        assertPrecondition("Zero division") {
+        expectPrecondition("Zero division") {
         }
     }
 
     func testPreconditionTrueCondition() {
-        assertPrecondition("Zero division") {
+        expectPrecondition("Zero division") {
             dividePrecondition(1, by: 1)
         }
     }
 
     func testPreconditionNoMessage() {
-        assertPrecondition() {
+        expectPrecondition() {
             dividePrecondition(1, by: 0)
         }
     }
 
     func testPreconditionErrorIncorrectMessage() {
-        assertPrecondition("Invalid") {
+        expectPrecondition("Invalid") {
             dividePrecondition(1, by: 0)
         }
     }
 
     func testPreconditionCorrectMessage() {
-        assertPrecondition("Zero division") {
+        expectPrecondition("Zero division") {
             dividePrecondition(1, by: 0)
         }
     }
@@ -108,25 +115,25 @@ class AssertionsTestsExample: XCTestCase {
     // preconditionFailure tests
 
     func testPreconditionFailureNotCalled() {
-        assertPreconditionFailure("Zero division") {
+        expectPreconditionFailure("Zero division") {
             dividePreconditionFailure(1, by: 1)
         }
     }
 
     func testPreconditionFailureNoMessage() {
-        assertPreconditionFailure() {
+        expectPreconditionFailure() {
             dividePreconditionFailure(1, by: 0)
         }
     }
 
     func testPreconditionFailureErrorIncorrectMessage() {
-        assertPreconditionFailure("Invalid") {
+        expectPreconditionFailure("Invalid") {
             dividePreconditionFailure(1, by: 0)
         }
     }
 
     func testPreconditionFailureCorrectMessage() {
-        assertPreconditionFailure("Zero division") {
+        expectPreconditionFailure("Zero division") {
             dividePreconditionFailure(1, by: 0)
         }
     }
@@ -134,25 +141,25 @@ class AssertionsTestsExample: XCTestCase {
     // fatalError tests
 
     func testFatalErrorNotCalled() {
-        assertFatalError("Zero division!") {
+        expectFatalError("Zero division!") {
             divideFatalError(1, by: 1)
         }
     }
 
     func testFatalErrorNoMessage() {
-        assertFatalError() {
+        expectFatalError() {
             divideFatalError(1, by: 0)
         }
     }
 
     func testFatalErrorIncorrectMessage() {
-        assertFatalError("Invalid") {
+        expectFatalError("Invalid") {
             divideFatalError(1, by: 0)
         }
     }
 
     func testFatalCorrectMessage() {
-        assertFatalError("Zero division") {
+        expectFatalError("Zero division") {
             divideFatalError(1, by: 0)
         }
     }
