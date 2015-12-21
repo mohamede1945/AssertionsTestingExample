@@ -15,7 +15,7 @@ import UIKit
 /// 4. Unit test them with the new methods `expectAssert`, `expectAssertionFailure`, `expectPrecondition`, `expectPreconditionFailure` and `expectFatalError`.
 ///
 /// This file is just an example of how to use the functions. Normally as you would do previously.
-/// For a complete project example see https://github.com/mohamede1945/AssertionsTestingExample
+/// For a complete project example see <https://github.com/mohamede1945/AssertionsTestingExample>
 
 func divideAssert(x: Float, by y: Float) -> Float {
 

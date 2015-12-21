@@ -18,7 +18,7 @@ import XCTest
 ///
 /// This file is just an example of how to unit test the functions.
 /// When you run tests, you should expect many of them to fail. This is normally, because the test cases tests the error message produced by expectXXX methods.
-/// For a complete project example see https://github.com/mohamede1945/AssertionsTestingExample
+/// For a complete project example see <https://github.com/mohamede1945/AssertionsTestingExample>
 
 class AssertionsTestsExample: XCTestCase {
 
