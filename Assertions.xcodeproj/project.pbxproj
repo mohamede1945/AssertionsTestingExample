@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		548AAC121C271584003BC389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AAC111C271584003BC389 /* AppDelegate.swift */; };
-		548AAC141C271584003BC389 /* Divide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AAC131C271584003BC389 /* Divide.swift */; };
+		548AAC141C271584003BC389 /* ProgrammerAssertionsExampleDivide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AAC131C271584003BC389 /* ProgrammerAssertionsExampleDivide.swift */; };
 		548AAC171C271584003BC389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548AAC151C271584003BC389 /* Main.storyboard */; };
 		548AAC191C271584003BC389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 548AAC181C271584003BC389 /* Assets.xcassets */; };
 		548AAC1C1C271584003BC389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548AAC1A1C271584003BC389 /* LaunchScreen.storyboard */; };
-		548AAC2A1C271594003BC389 /* AssertionsTestsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AAC291C271594003BC389 /* AssertionsTestsExample.swift */; };
+		548AAC2A1C271594003BC389 /* ProgrammerAssertionsExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AAC291C271594003BC389 /* ProgrammerAssertionsExampleTests.swift */; };
 		548AAC321C2715AC003BC389 /* XCTestCase+ProgrammerAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AAC311C2715AC003BC389 /* XCTestCase+ProgrammerAssertions.swift */; };
 		548AAC341C2715C2003BC389 /* ProgrammerAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AAC331C2715C2003BC389 /* ProgrammerAssertions.swift */; };
 /* End PBXBuildFile section */
@@ -30,13 +30,13 @@
 /* Begin PBXFileReference section */
 		548AAC0E1C271584003BC389 /* Assertions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assertions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		548AAC111C271584003BC389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		548AAC131C271584003BC389 /* Divide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divide.swift; sourceTree = "<group>"; };
+		548AAC131C271584003BC389 /* ProgrammerAssertionsExampleDivide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammerAssertionsExampleDivide.swift; sourceTree = "<group>"; };
 		548AAC161C271584003BC389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		548AAC181C271584003BC389 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		548AAC1B1C271584003BC389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		548AAC1D1C271584003BC389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		548AAC271C271594003BC389 /* AssertionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssertionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		548AAC291C271594003BC389 /* AssertionsTestsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertionsTestsExample.swift; sourceTree = "<group>"; };
+		548AAC291C271594003BC389 /* ProgrammerAssertionsExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammerAssertionsExampleTests.swift; sourceTree = "<group>"; };
 		548AAC2B1C271594003BC389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		548AAC311C2715AC003BC389 /* XCTestCase+ProgrammerAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+ProgrammerAssertions.swift"; sourceTree = "<group>"; };
 		548AAC331C2715C2003BC389 /* ProgrammerAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammerAssertions.swift; sourceTree = "<group>"; };
@@ -82,12 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				548AAC331C2715C2003BC389 /* ProgrammerAssertions.swift */,
-				548AAC111C271584003BC389 /* AppDelegate.swift */,
-				548AAC131C271584003BC389 /* Divide.swift */,
-				548AAC151C271584003BC389 /* Main.storyboard */,
-				548AAC181C271584003BC389 /* Assets.xcassets */,
-				548AAC1A1C271584003BC389 /* LaunchScreen.storyboard */,
-				548AAC1D1C271584003BC389 /* Info.plist */,
+				548AAC131C271584003BC389 /* ProgrammerAssertionsExampleDivide.swift */,
+				548AAC361C283F39003BC389 /* AppDelegate */,
+				548AAC351C283F2B003BC389 /* Resources */,
 			);
 			path = Assertions;
 			sourceTree = "<group>";
@@ -96,10 +93,37 @@
 			isa = PBXGroup;
 			children = (
 				548AAC311C2715AC003BC389 /* XCTestCase+ProgrammerAssertions.swift */,
-				548AAC291C271594003BC389 /* AssertionsTestsExample.swift */,
-				548AAC2B1C271594003BC389 /* Info.plist */,
+				548AAC291C271594003BC389 /* ProgrammerAssertionsExampleTests.swift */,
+				548AAC371C283F4A003BC389 /* Resources */,
 			);
 			path = AssertionsTests;
+			sourceTree = "<group>";
+		};
+		548AAC351C283F2B003BC389 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				548AAC151C271584003BC389 /* Main.storyboard */,
+				548AAC181C271584003BC389 /* Assets.xcassets */,
+				548AAC1A1C271584003BC389 /* LaunchScreen.storyboard */,
+				548AAC1D1C271584003BC389 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		548AAC361C283F39003BC389 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				548AAC111C271584003BC389 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		548AAC371C283F4A003BC389 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				548AAC2B1C271594003BC389 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				548AAC141C271584003BC389 /* Divide.swift in Sources */,
+				548AAC141C271584003BC389 /* ProgrammerAssertionsExampleDivide.swift in Sources */,
 				548AAC341C2715C2003BC389 /* ProgrammerAssertions.swift in Sources */,
 				548AAC121C271584003BC389 /* AppDelegate.swift in Sources */,
 			);
@@ -213,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				548AAC2A1C271594003BC389 /* AssertionsTestsExample.swift in Sources */,
+				548AAC2A1C271594003BC389 /* ProgrammerAssertionsExampleTests.swift in Sources */,
 				548AAC321C2715AC003BC389 /* XCTestCase+ProgrammerAssertions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
