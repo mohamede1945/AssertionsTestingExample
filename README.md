@@ -53,3 +53,7 @@ Thanks to [nschum](http://stackoverflow.com/users/168939/nschum) and [Ken Ko](ht
 ## Author
 
 Mohamed Afifi, mohamede1945@gmail.com
+
+## License
+
+AssertionsTestingExample is available under the MIT license. See the LICENSE file for more info.
