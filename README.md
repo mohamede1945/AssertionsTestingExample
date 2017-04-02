@@ -1,5 +1,7 @@
 # AssertionsTestingExample
 
+## This library is deprecated. You can use https://github.com/mattgallagher/CwlPreconditionTesting instead.
+
 Finally, you can achieve 100% coverage. Previously, you couldn't because you cannot test `assert`, `assertionFailure`, `precondition`, `preconditionFailure` and `fatalError`. But now with every easy steps you can test them.
 
 This is an example app to show you how to do it. When you test `command + U` the app. You will find many test cases fail. This is intentional, to show that `expectAssert` for example fails the test case with a proper error message when the assert function is not called.
